@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scierie Pageot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ 
+  <!-- ── TOPBAR ── -->
+  <div class="topbar">
+  <img src="pageot sans fond.png" alt="Logo Scierie Pageot" class="nav-logo" />
+    </a>
+    <a href="#contact" class="btn nav-btn-desktop">Contact</a>
+    <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+ 
+  <!-- ── NAVBAR ── -->
+  <nav id="mainNav">
+    <ul class="nav-links">
+      <li><a href="#exploitation">Exploitation</a></li>
+      <li><a href="#chene">Transformation du chene</a></li>
+      <li><a href="#acacia">Nos piquets d'acacia</a></li>
+      <li><a href="#sciage">Nos propositions de sciage</a></li>
+    </ul>
+  </nav>
+ 
+  <!-- ── MENU MOBILE ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#exploitation" onclick="closeMenu()">Exploitation</a>
+    <a href="#chene" onclick="closeMenu()">Transformation du chene</a>
+    <a href="#acacia" onclick="closeMenu()">Nos piquets d'acacia</a>
+    <a href="#sciage" onclick="closeMenu()">Nos propositions de sciage</a>
+    <a href="#contact" class="btn" onclick="closeMenu()">Contact</a>
+  </div>
+ 
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <img src="photo drone du domaine.jpg" alt="Vue aerienne de la Scierie Pageot" />
+    <div class="hero-overlay"></div>
+  </section>
+ 
+  <!-- ── INTRO ── -->
+  <section class="intro">
+    <p>Fondee en 1970 sur les terres champenoises, la Scierie Pageot est implantee a Javernant, dans l'Aube (10).</p>
+    <p>Nous sommes profondement engages dans la preservation de notre patrimoine forestier et valorisons des essences locales reconnues pour leur qualite. Initialement specialisee dans le sciage toutes essences, la scierie a diversifie ses activites en 2023 en integrant la production de piquets en acacia.</p>
+    <p>Fort de plusieurs decennies d'experience, la Scierie Pageot accompagne tous les professionnels, comme les particuliers, dans leurs besoins en gestion forestiere et dans les travaux d'interieur et d'exterieur.</p>
+  </section>
+ 
+  <!-- ── SECTIONS ── -->
+  <div class="sections-wrapper">
+ 
+    <!-- 1. EXPLOITATION : image gauche (55%), texte droite (45%) -->
+    <section class="section-split" id="exploitation">
+      <div class="split-img">
+        <div class="carousel" data-carousel>
+          <div class="carousel-track">
+            <!-- Ajoutez vos images ici -->
+            <div class="carousel-slide"><img src="exploitation forestiere/1 tracteur contre arbre.jpg" alt="Exploitation 1" /></div>
+            <div class="carousel-slide"><img src="exploitation forestiere/2 image.jpg" alt="Exploitation 2" /></div>
+            <div class="carousel-slide"><img src="exploitation forestiere/3 image.jpg" alt="Exploitation 3" /></div>
+          </div>
+          <button class="carousel-btn prev" aria-label="Precedent">
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="carousel-btn next" aria-label="Suivant">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <div class="carousel-dots"></div>
+        </div>
+      </div>
+      <div class="split-content">
+        <h2>Exploitation<br>forestiere</h2>
+        <p>Notre scierie certifiee QCIS 0001 en PEFC s'approvisionne en bois sur des parcelles soigneusement selectionnees dans un rayon de 100 km.</p>
+        <p>Nous travaillons etroitement avec des professionnels locaux pour vous apporter un accompagnement expert dans la gestion de vos domaines forestiers. Nous assurons l'integralite de nos prestations et intervenons tout au long de l'operation, en etroite collaboration avec nos partenaires agrees (Globalog) dans le respect des bonnes pratiques sylvicoles, afin de garantir la preservation durable des forets.</p>
+        <p>L'ensemble de nos travaux, quel que soit leur importance, sont realises selon les meilleures regles de l'art. Vous satisfaire et vous aider a valoriser une gestion forestiere responsable est la priorite absolue de notre equipe.</p>
+        <a href="#contact" class="btn btn-outline">Contactez-nous</a>
+      </div>
+    </section>
+ 
+    <!-- 2. CHENE : texte gauche (45%), image droite (55%) -->
+    <section class="section-split reverse" id="chene">
+            <div class="split-img">
+        <div class="carousel" data-carousel>
+          <div class="carousel-track">
+            <!-- Ajoutez vos images ici -->
+            <div class="carousel-slide"><img src="Transformation de chene/1 troncs d'arbre.jpg" alt="Chene 1" /></div>
+            <div class="carousel-slide"><img src="Transformation de chene/2 image.jpg" alt="Chene 2" /></div>
+            <div class="carousel-slide"><img src="Transformation de chene/4 planches fines.jpg" alt="Chene 3" /></div>
+          </div>
+          <button class="carousel-btn prev" aria-label="Precedent">
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="carousel-btn next" aria-label="Suivant">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <div class="carousel-dots"></div>
+        </div>
+      </div>
+      <div class="split-content">
+        <h2>Nos transformations<br>du chene</h2>
+        <div class="subsection-label">En charpente</div>
+        <p>Pour repondre a tous vos projets de construction, nous proposons une large gamme de pieces de charpente adaptees aux demandes des professionnels comme des particuliers. Nos bois, seches et soigneusement selectionnes, garantissent stabilite et grande durabilite pour vos ouvrages.</p>
+        <div class="subsection-label">En avives</div>
+        <p>Afin de faciliter vos projets et agrandissements interieurs, nous proposons des produits de la plus haute qualite, issus de chene selectionne et regulierement renouvele.</p>
+        <div class="subsection-label">En traverses paysageres</div>
+        <p>Pour sublimer votre exterieur, nous proposons des traverses paysageres naturels et esthetiques, adaptes pour l'amenagement de jardins et la realisation de petits murets.</p>
+        <a href="#contact" class="btn btn-outline">Consultez-nous</a>
+      </div>
+
+    </section>
+ 
+    <!-- 3. PIQUETS : image gauche (55%), texte droite (45%) -->
+    <section class="section-split" id="acacia">
+      <div class="split-img">
+        <div class="carousel" data-carousel>
+          <div class="carousel-track">
+            <!-- Ajoutez vos images ici -->
+            <div class="carousel-slide"><img src="Acacia/pic d'acacia.jpg" alt="Acacia 1" /></div>
+            <div class="carousel-slide"><img src="Acacia/2 image.jpg" alt="Acacia 2" /></div>
+            <div class="carousel-slide"><img src="Acacia/3 image.jpg" alt="Acacia 3" /></div>
+          </div>
+          <button class="carousel-btn prev" aria-label="Precedent">
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="carousel-btn next" aria-label="Suivant">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <div class="carousel-dots"></div>
+        </div>
+      </div>
+      <div class="split-content">
+        <h2>Nos piquets<br>d'acacia</h2>
+        <p>8 longueurs disponibles directement sur site :</p>
+        <ul class="piquets-list">
+          <li>1160 mm</li>
+          <li>1300 mm</li>
+          <li>1500 mm</li>
+          <li>2000 mm</li>
+          <li>2500 mm</li>
+          <li>3000 mm</li>
+        </ul>
+        <p>et a tenons differentes de soupes.</p>
+        <p>Vendu par botte ou en vrac. Disponibles en differents formats (80/100, 60/80 ou 50/60 mm).</p>
+        <p>Livraison disponible dans toute la France et dans l'Union Europeenne. Possibilite de faire confectionner les longueurs et dimensions sur commande.</p>
+        <a href="#contact" class="btn btn-outline">Vous souhaitez un devis ?</a>
+      </div>
+    </section>
+ 
+    <!-- 4. SCIAGE : texte gauche (45%), image droite (55%) -->
+    <section class="section-split reverse" id="sciage">
+      <div class="split-img">
+        <div class="carousel" data-carousel>
+          <div class="carousel-track">
+            <!-- Ajoutez vos images ici -->
+            <div class="carousel-slide"><img src="Transformation de chene/4 planches fines.jpg" alt="Sciage 1" /></div>
+            <div class="carousel-slide"><img src="Transformation de chene/2 image.jpg" alt="Sciage 2" /></div>
+            <div class="carousel-slide"><img src="Transformation de chene/3 image.jpg" alt="Sciage 3" /></div>
+          </div>
+          <button class="carousel-btn prev" aria-label="Precedent">
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="carousel-btn next" aria-label="Suivant">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <div class="carousel-dots"></div>
+        </div>
+      </div>
+      <div class="split-content">
+        <h2>Nos propositions<br>de sciage</h2>
+        <p class="sciage-dims">
+          Longueur maximum 10m<br>
+          80mm x 100mm<br>
+          80mm x 120mm<br>
+          80mm x 80mm<br>
+          100mm x 100mm<br>
+          220mm x 200mm
+        </p>
+        <p class="sciage-note">Taille sur mesure disponible sur commande - tarif par jour a definir</p>
+        <div class="subsection-label">Traverses paysageres chene</div>
+        <p class="sciage-dims">
+          Longueur maximum 2,5m<br>
+          100mm x 100mm<br>
+          150mm x 150mm<br>
+          220mm x 220mm
+        </p>
+        <div class="subsection-label">Autres essences disponibles</div>
+        <p class="sciage-dims">
+          Tailles et essences disponibles sur commande :<br>
+          Acacia, Douglas, Pin, Chataignier et Peuplier.
+        </p>
+      </div>
+      
+    </section>
+ 
+  </div>
+ 
+  <!-- ── CONTACT ── -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-block">
+            <p><strong>Adresse</strong>Route Nationale 77 Le Charmois<br>10230 Javernant</p>
+          </div>
+          <div class="contact-block">
+            <p><strong>Horaires d'ouverture</strong>Disponible sur rendez-vous<br>du lundi au vendredi</p>
+          </div>
+          <div class="contact-block">
+            <p><strong>Telephone</strong>+33 (0) 6 40 34 74 75</p>
+          </div>
+          <div style="margin-top: 32px;">
+            <a href="mailto:contact@scierie-pageot.fr" class="btn">Nous envoyer un mail</a>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe
+            title="Localisation Scierie Pageot"
+            src="https://maps.google.com/maps?q=48.14885296104546,4.011341712448942&z=15&output=embed"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>2024 Scierie Pageot - Javernant (10)</p>
+    <nav class="footer-links">
+      <a href="#">Mentions legales</a>
+      <a href="#">Certifie PEFC</a>
+    </nav>
+  </footer>
+ 
+  <script>
+    /* ── Navbar scroll ── */
+    const mainNav = document.getElementById('mainNav');
+    const topbar = document.querySelector('.topbar');
+    window.addEventListener('scroll', function() {
+      mainNav.classList.toggle('scrolled', window.scrollY > topbar.offsetHeight);
+    });
+ 
+    /* ── Menu mobile ── */
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    }
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobileMenu');
+      const toggle = document.querySelector('.nav-toggle');
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    });
+ 
+    /* ── Carrousels ── */
+    document.querySelectorAll('[data-carousel]').forEach(function(carousel) {
+      const track = carousel.querySelector('.carousel-track');
+      const slides = carousel.querySelectorAll('.carousel-slide');
+      const dotsContainer = carousel.querySelector('.carousel-dots');
+      const btnPrev = carousel.querySelector('.carousel-btn.prev');
+      const btnNext = carousel.querySelector('.carousel-btn.next');
+      let current = 0;
+      const total = slides.length;
+ 
+      /* masquer flèches si une seule image */
+      if (total <= 1) {
+        btnPrev.style.display = 'none';
+        btnNext.style.display = 'none';
+      }
+ 
+      /* créer les points */
+      slides.forEach(function(_, i) {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+        dot.addEventListener('click', function() { goTo(i); });
+        dotsContainer.appendChild(dot);
+      });
+ 
+      function goTo(index) {
+        current = (index + total) % total;
+        track.style.transform = 'translateX(-' + current * 100 + '%)';
+        carousel.querySelectorAll('.carousel-dot').forEach(function(d, i) {
+          d.classList.toggle('active', i === current);
+        });
+      }
+ 
+      btnPrev.addEventListener('click', function() { goTo(current - 1); });
+      btnNext.addEventListener('click', function() { goTo(current + 1); });
+ 
+      /* swipe tactile */
+      let startX = 0;
+      track.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', function(e) {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+      });
+    });
+  </script>
+ 
+</body>
+</html>
