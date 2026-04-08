@@ -204,7 +204,7 @@ body {
 
 /* ── WRAPPER SECTIONS ── */
 .sections-wrapper {
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
   padding: 48px 24px;
   display: flex;
@@ -217,7 +217,7 @@ body {
   display: grid;
   grid-template-columns: 45fr 55fr;
   min-height: 460px;
-  max-height: 800px;
+  /* max-height: 800px; */
   gap: 24px;
   align-items: stretch;
   grid-template-areas: "text img ";
@@ -238,8 +238,14 @@ body {
   border-radius: 30px;
   overflow: hidden; /* bloque le débordement au hover */
   min-height: 400px;
+ /*spect-ratio: 5 / 3;*/
 }
-
+.split-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 👈 indispensable */
+  display: block;
+}
 .carousel {
   position: relative;
   width: 100%;
@@ -506,16 +512,49 @@ footer p { font-size: 12.5px; }
 .footer-links a:hover { color: rgba(255,255,255,0.9); }
 
 /* ── TABLET ── */
-@media (max-width: 1024px) {
-  .topbar { padding: 0 28px; }
-  .nav-links { gap: 20px; }
-  .nav-links a { font-size: 13px; }
-  .intro { padding: 48px 28px; }
-  .sections-wrapper { padding: 36px 20px; gap: 28px; }
-  .split-content { padding: 44px 36px; }
-  .contact-section { padding: 64px 28px; }
-  footer { padding: 24px 28px; }
+@media (max-width: 1300px) {
+  .section-split {
+    grid-template-columns: 100%;          /* une seule colonne */
+    grid-template-areas: 
+      "text"
+      "img";
+    
+    gap: 0; /* 👈 supprime l’espace entre les deux blocs */
+  }
+.split-img {
+  aspect-ratio: 3 / 2;
+  border-radius: 30px;
+  overflow: hidden;
 }
+
+.split-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* toutes les sections deviennent uniformes */
+  .section-split.reverse {
+    grid-template-columns: 100%; /* une seule colonne sur tablette */
+    grid-template-areas: 
+      "text"
+      "img";
+  }
+  .section-split.reverse .split-img {
+    order: 0; /* remet l’ordre normal */
+  }
+}
+
+@media (min-width: 1300px){
+  .section-split {
+    max-height:800px;
+  }
+  .split-content {
+    max-height:800px;
+  }
+ }
+
+
 
 /* ── TABLET PORTRAIT ── */
 @media (max-width: 768px) {
@@ -524,28 +563,19 @@ footer p { font-size: 12.5px; }
   .nav-btn-desktop { display: none; }
   .nav-toggle { display: flex; }
   .mobile-menu { top: 56px; }
-
+ 
   .hero { margin-top: 56px; height: 380px; }
   .intro { padding: 40px 20px; }
   .sections-wrapper { padding: 24px 16px; gap: 20px; }
-
-  .section-split,
-  .section-split.reverse {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .section-split.reverse .split-img { order: 0; }
-  .split-img { min-height: 260px; order: -1; }
-
-  .split-content { padding: 36px 20px; border-radius: 30px; }
-  .split-content h2 { text-align: center; }
-  .split-content p { text-align: center; }
-
+ 
+  .split-img { min-height: 260px; }
+  .split-content { padding: 36px 20px; }
+ 
   .contact-section { padding: 56px 20px; }
   .contact-grid { grid-template-columns: 1fr; gap: 28px; }
   footer { flex-direction: column; align-items: flex-start; padding: 20px; gap: 10px; }
 }
+
 
 /* ── MOBILE ── */
 @media (max-width: 480px) {
