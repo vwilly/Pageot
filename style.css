@@ -72,6 +72,9 @@ body {
   align-items: center;
   gap: 32px;
   list-style: none;
+  text-align: center;
+  margin: 15px;
+  border-radius: 20px;
 }
 
 .nav-links a {
@@ -511,6 +514,16 @@ footer p { font-size: 12.5px; }
 
 .footer-links a:hover { color: rgba(255,255,255,0.9); }
 
+
+@media (min-width: 1300px){
+  .section-split {
+    max-height:900px;
+  }
+  .split-content {
+    max-height:900px;
+  }
+
+ }
 /* ── TABLET ── */
 @media (max-width: 1300px) {
   .section-split {
@@ -521,10 +534,17 @@ footer p { font-size: 12.5px; }
     
     gap: 0; /* 👈 supprime l’espace entre les deux blocs */
   }
-.split-img {
+
+  .split-content {
+  padding: 36px 24px;
+  border-radius:  30px 30px 0 0; /* arrondit seulement le haut */
+}
+
+  .split-img {
   aspect-ratio: 3 / 2;
   border-radius: 30px;
   overflow: hidden;
+  border-radius: 0 0 30px 30px ; /* arrondit seulement le haut */
 }
 
 .split-img img {
@@ -534,35 +554,34 @@ footer p { font-size: 12.5px; }
 }
 
 /* toutes les sections deviennent uniformes */
-  .section-split.reverse {
+.section-split.reverse {
     grid-template-columns: 100%; /* une seule colonne sur tablette */
     grid-template-areas: 
       "text"
       "img";
-  }
-  .section-split.reverse .split-img {
+}
+.section-split.reverse .split-img {
     order: 0; /* remet l’ordre normal */
-  }
 }
 
-@media (min-width: 1300px){
-  .section-split {
-    max-height:800px;
-  }
-  .split-content {
-    max-height:800px;
-  }
- }
+.contact-grid {
+  text-align: center;
+}
 
+}
 
-
-/* ── TABLET PORTRAIT ── */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .topbar { padding: 0 20px; height: 56px; }
   #mainNav { display: none; }
   .nav-btn-desktop { display: none; }
   .nav-toggle { display: flex; }
   .mobile-menu { top: 56px; }
+}
+
+
+/* ── TABLET PORTRAIT ── */
+@media (max-width: 768px) {
+
  
   .hero { margin-top: 56px; height: 380px; }
   .intro { padding: 40px 20px; }
